@@ -15,12 +15,12 @@
 					<div class="lg:max-w-lg">
 						<h1 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">挽星tEam - <span class="text-blue-500"> F4Team </span></h1>
 
-						<p class="mt-3 text-gray-600 dark:text-gray-400">一个建立于 <span class="font-medium text-blue-500">2022年12月25日</span> 的网络团队。</p>
+						<p class="mt-3 text-gray-600 dark:text-gray-400">一个建立于 <span class="font-medium text-blue-500">2022年12月20日</span> 的网络团队。</p>
 					</div>
 				</div>
 
 				<div class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
-					<img class="w-full h-full max-w-md" src="http://file.yingyya.cn/f4team/email.svg">
+					<img class="w-full h-full max-w-md" src="http://file.yingyya.cn/f4team/email.svg" alt="挽星tEam">
 				</div>
 			</div>
 		</div>
