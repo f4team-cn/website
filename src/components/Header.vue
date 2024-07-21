@@ -6,7 +6,7 @@
 	<header class="bg-white dark:bg-gray-900">
 		<nav class="border-t-4 border-blue-500">
 			<div class="container flex items-center justify-between px-6 py-3 mx-auto">
-				<a href="#"> <img class="w-auto h-16" src="http://file.yingyya.cn/f4team/logo-hdpi.png" alt=""> </a>
+				<a href="#"> <img class="w-auto h-16" src="/logo/logo-hdpi.png" alt=""> </a>
 			</div>
 		</nav>
 		<div class="container px-6 py-16 mx-auto">
@@ -20,7 +20,7 @@
 				</div>
 
 				<div class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
-					<img class="w-full h-full max-w-md" src="http://file.yingyya.cn/f4team/email.svg" alt="挽星tEam">
+					<img class="w-full h-full max-w-md" src="/images/email.svg" alt="挽星tEam">
 				</div>
 			</div>
 		</div>

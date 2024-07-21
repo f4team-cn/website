@@ -17,7 +17,6 @@
 						<h2 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Email</h2>
 						<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">通过电子邮箱联系我们。</p>
 						<p class="mt-2 text-sm text-blue-500 dark:text-blue-400">team@f4team.cn</p>
-						<p class="mt-2 text-sm text-blue-500 dark:text-blue-400">u@yingyya.cn</p>
 					</div>
 				</div>
 			</div>
