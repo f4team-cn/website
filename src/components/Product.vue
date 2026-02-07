@@ -23,7 +23,7 @@
                             <h2 class="text-xs font-semibold tracking-wider text-indigo-600">
                                 F4Link · 短链服务
                             </h2>
-                            <h1 class="text-xl font-bold text-gray-900 md:text-2xl">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white md:text-2xl">
                                 极简短网址生成平台
                             </h1>
                             <p class="text-gray-600 leading-relaxed">
@@ -57,7 +57,7 @@
                             <h2 class="text-xs font-semibold tracking-wider text-indigo-600">
                                 轻阅小说 · 精品阅读
                             </h2>
-                            <h1 class="text-xl font-bold text-gray-900 md:text-2xl">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white md:text-2xl">
                                 海量小说免费阅读平台
                             </h1>
                             <p class="text-gray-600 leading-relaxed">
@@ -70,6 +70,40 @@
                             <a
                                     class="text-indigo-500 border rounded-md px-4 py-2 mt-2 hover:border-indigo-800 hover:bg-indigo-50 border-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 transition-colors"
                                     href="https://novel.f4team.cn"
+                                    target="_blank"
+                            >
+                                查看
+                                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                     fill="none">
+                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:border-opacity-100 hover:shadow-md hover:border-indigo-400 hover:scale-[1.02] group">
+                    <div class="flex-grow overflow-hidden">
+                        <img class="w-full h-full object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-110"
+                             src="/ws/sns.f4team.cn.png">
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-2">
+                            <h2 class="text-xs font-semibold tracking-wider text-indigo-600">
+                                智网统计 · 极简安全
+                            </h2>
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white md:text-2xl">
+                                极简且注重隐私的访客分析平台
+                            </h1>
+                            <p class="text-gray-600 leading-relaxed">
+                                重新定义网站数据洞察
+                                <span class="block mt-1 text-sm text-gray-400">免费使用</span>
+                            </p>
+                        </div>
+                        <div class="flex items-center flex-wrap">
+                            <a
+                                    class="text-indigo-500 border rounded-md px-4 py-2 mt-2 hover:border-indigo-800 hover:bg-indigo-50 border-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 transition-colors"
+                                    href="https://sns.f4team.cn"
                                     target="_blank"
                             >
                                 查看
