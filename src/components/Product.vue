@@ -145,12 +145,26 @@
           </div>
         </div>
 
+        <!--        <div class="relative w-full h-full overflow-hidden bg-white">-->
+        <!--          &lt;!&ndash; 背景层（永远铺满，不动） &ndash;&gt;-->
+        <!--          <img src="/ws/vortex-bg.png" class="absolute inset-0 w-full h-full object-cover" />-->
+
+        <!--          &lt;!&ndash; 前景层（负责旋转） &ndash;&gt;-->
+        <!--          <img-->
+        <!--            src="/ws/vortex-app.png"-->
+        <!--            class="absolute inset-0 w-full h-full object-contain scale-110 transition-transform duration-500 group-hover:rotate-180"-->
+        <!--          />-->
+        <!--        </div>-->
+
         <div
           class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:border-opacity-100 hover:shadow-md hover:border-indigo-400 hover:scale-[1.02] group"
         >
-          <div class="flex-grow overflow-hidden">
+          <!-- 图片区域 -->
+          <div class="relative w-full aspect-[4/3] overflow-hidden">
+            <div class="absolute inset-0 bg-white"></div>
+
             <img
-              class="w-full h-full object-cover transition-transform group-hover:animate-spin"
+              class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:animate-spin"
               src="/ws/vortex-app.png"
             />
           </div>
@@ -204,16 +218,6 @@
             <div class="flex items-center flex-wrap gap-3">
               <a
                 class="text-indigo-500 border rounded-md px-4 py-2 mt-2 hover:border-indigo-800 hover:bg-indigo-50 border-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 transition-colors"
-                href="https://pan.f4team.cn"
-                target="_blank"
-              >
-                查看
-                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-              <a
-                class="text-indigo-500 border rounded-md px-4 py-2 mt-2 hover:border-indigo-800 hover:bg-indigo-50 border-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 transition-colors"
                 href="javascript:document.getElementById('PanUserAgreement').showModal()"
               >
                 免责声明
@@ -221,6 +225,16 @@
                   <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
                   <path d="M14 2v6h6" />
                   <path d="M8 13h8M8 17h8M8 9h4" />
+                </svg>
+              </a>
+              <a
+                class="text-indigo-500 border rounded-md px-4 py-2 mt-2 hover:border-indigo-800 hover:bg-indigo-50 border-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 transition-colors"
+                href="https://pan.f4team.cn"
+                target="_blank"
+              >
+                查看
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </a>
             </div>
