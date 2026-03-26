@@ -204,7 +204,7 @@
             <div class="flex items-center flex-wrap gap-3">
               <a
                 class="text-indigo-500 border rounded-md px-4 py-2 mt-2 hover:border-indigo-800 hover:bg-indigo-50 border-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 transition-colors"
-                href="https://sns.f4team.cn"
+                href="https://pan.f4team.cn"
                 target="_blank"
               >
                 查看
