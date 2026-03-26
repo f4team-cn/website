@@ -145,21 +145,9 @@
           </div>
         </div>
 
-        <!--        <div class="relative w-full h-full overflow-hidden bg-white">-->
-        <!--          &lt;!&ndash; 背景层（永远铺满，不动） &ndash;&gt;-->
-        <!--          <img src="/ws/vortex-bg.png" class="absolute inset-0 w-full h-full object-cover" />-->
-
-        <!--          &lt;!&ndash; 前景层（负责旋转） &ndash;&gt;-->
-        <!--          <img-->
-        <!--            src="/ws/vortex-app.png"-->
-        <!--            class="absolute inset-0 w-full h-full object-contain scale-110 transition-transform duration-500 group-hover:rotate-180"-->
-        <!--          />-->
-        <!--        </div>-->
-
         <div
           class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:border-opacity-100 hover:shadow-md hover:border-indigo-400 hover:scale-[1.02] group"
         >
-          <!-- 图片区域 -->
           <div class="relative w-full aspect-[4/3] overflow-hidden">
             <div class="absolute inset-0 bg-white"></div>
 
