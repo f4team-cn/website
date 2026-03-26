@@ -1,17 +1,17 @@
 <template>
   <p ref="rootRef" :class="['blur-text', className, 'flex', 'flex-wrap']">
     <Motion
-        v-for="(segment, index) in elements"
-        :key="`${animationKey}-${index}`"
-        tag="span"
-        :initial="fromSnapshot"
-        :animate="inView ? getAnimateKeyframes() : fromSnapshot"
-        :transition="getTransition(index)"
-        :style="{
+      v-for="(segment, index) in elements"
+      :key="`${animationKey}-${index}`"
+      tag="span"
+      :initial="fromSnapshot"
+      :animate="inView ? getAnimateKeyframes() : fromSnapshot"
+      :transition="getTransition(index)"
+      :style="{
         display: 'inline-block',
-        willChange: 'transform, filter, opacity'
+        willChange: 'transform, filter, opacity',
       }"
-        @animation-complete="() => handleAnimationComplete(index)"
+      @animation-complete="() => handleAnimationComplete(index)"
     >
       {{ segment === ' ' ? '\u00A0' : segment
       }}{{ animateBy === 'words' && index < elements.length - 1 ? '\u00A0' : '' }}
@@ -51,19 +51,19 @@ const props = withDefaults(defineProps<BlurTextProps>(), {
   threshold: 0.1,
   rootMargin: '0px',
   easing: (t: number) => t,
-  stepDuration: 0.35
+  stepDuration: 0.35,
 });
 
 const buildKeyframes = (
-    from: AnimationSnapshot,
-    steps: AnimationSnapshot[]
+  from: AnimationSnapshot,
+  steps: AnimationSnapshot[]
 ): Record<string, Array<string | number>> => {
-  const keys = new Set<string>([...Object.keys(from), ...steps.flatMap(step => Object.keys(step))]);
+  const keys = new Set<string>([...Object.keys(from), ...steps.flatMap((step) => Object.keys(step))]);
 
   const keyframes: Record<string, Array<string | number>> = {};
 
   for (const key of keys) {
-    keyframes[key] = [from[key], ...steps.map(step => step[key])];
+    keyframes[key] = [from[key], ...steps.map((step) => step[key])];
   }
 
   return keyframes;
@@ -72,20 +72,20 @@ const buildKeyframes = (
 const elements = computed(() => (props.animateBy === 'words' ? props.text.split(' ') : props.text.split('')));
 
 const defaultFrom = computed<AnimationSnapshot>(() =>
-    props.direction === 'top' ? { filter: 'blur(10px)', opacity: 0, y: -50 } : { filter: 'blur(10px)', opacity: 0, y: 50 }
+  props.direction === 'top' ? { filter: 'blur(10px)', opacity: 0, y: -50 } : { filter: 'blur(10px)', opacity: 0, y: 50 }
 );
 
 const defaultTo = computed<AnimationSnapshot[]>(() => [
   {
     filter: 'blur(5px)',
     opacity: 0.5,
-    y: props.direction === 'top' ? 5 : -5
+    y: props.direction === 'top' ? 5 : -5,
   },
   {
     filter: 'blur(0px)',
     opacity: 1,
-    y: 0
-  }
+    y: 0,
+  },
 ]);
 
 const fromSnapshot = computed(() => props.animationFrom ?? defaultFrom.value);
@@ -94,7 +94,7 @@ const toSnapshots = computed(() => props.animationTo ?? defaultTo.value);
 const stepCount = computed(() => toSnapshots.value.length + 1);
 const totalDuration = computed(() => props.stepDuration * (stepCount.value - 1));
 const times = computed(() =>
-    Array.from({ length: stepCount.value }, (_, i) => (stepCount.value === 1 ? 0 : i / (stepCount.value - 1)))
+  Array.from({ length: stepCount.value }, (_, i) => (stepCount.value === 1 ? 0 : i / (stepCount.value - 1)))
 );
 
 const inView = ref(false);
@@ -108,16 +108,16 @@ const setupObserver = () => {
   if (!rootRef.value) return;
 
   observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          inView.value = true;
-          observer?.unobserve(rootRef.value as Element);
-        }
-      },
-      {
-        threshold: props.threshold,
-        rootMargin: props.rootMargin
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        inView.value = true;
+        observer?.unobserve(rootRef.value as Element);
       }
+    },
+    {
+      threshold: props.threshold,
+      rootMargin: props.rootMargin,
+    }
   );
 
   observer.observe(rootRef.value);
@@ -132,7 +132,7 @@ const getTransition = (index: number) => {
     duration: totalDuration.value,
     times: times.value,
     delay: (index * props.delay) / 1000,
-    ease: props.easing
+    ease: props.easing,
   };
 };
 

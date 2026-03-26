@@ -8,12 +8,12 @@ import Product from './components/Product.vue';
 </script>
 
 <template>
-	<div>
-		<home-header></home-header>
-		<introduce></introduce>
-		<product></product>
-		<members></members>
-		<contact></contact>
-		<home-footer></home-footer>
-	</div>
+  <div>
+    <home-header></home-header>
+    <introduce></introduce>
+    <product></product>
+    <members></members>
+    <contact></contact>
+    <home-footer></home-footer>
+  </div>
 </template>

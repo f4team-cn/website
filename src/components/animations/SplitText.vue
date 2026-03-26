@@ -1,10 +1,10 @@
 <template>
   <p
-      ref="textRef"
-      :class="`split-parent overflow-hidden inline-block whitespace-normal ${className}`"
-      :style="{
+    ref="textRef"
+    :class="`split-parent overflow-hidden inline-block whitespace-normal ${className}`"
+    :style="{
       textAlign,
-      wordWrap: 'break-word'
+      wordWrap: 'break-word',
     }"
   >
     {{ text }}
@@ -44,7 +44,7 @@ const props = withDefaults(defineProps<SplitTextProps>(), {
   to: () => ({ opacity: 1, y: 0 }),
   threshold: 0.1,
   rootMargin: '-100px',
-  textAlign: 'center'
+  textAlign: 'center',
 });
 
 const emit = defineEmits<{
@@ -74,7 +74,7 @@ const initializeAnimation = async () => {
     splitter = new GSAPSplitText(el, {
       type: props.splitType,
       absolute: absoluteLines,
-      linesClass: 'split-line'
+      linesClass: 'split-line',
     });
     splitterRef.value = splitter;
   } catch (error) {
@@ -103,7 +103,7 @@ const initializeAnimation = async () => {
     return;
   }
 
-  targets.forEach(t => {
+  targets.forEach((t) => {
     (t as HTMLElement).style.willChange = 'transform, opacity';
   });
 
@@ -120,9 +120,9 @@ const initializeAnimation = async () => {
       start,
       toggleActions: 'play none none none',
       once: true,
-      onToggle: self => {
+      onToggle: (self) => {
         scrollTriggerRef.value = self;
-      }
+      },
     },
     smoothChildTiming: true,
     onComplete: () => {
@@ -130,11 +130,11 @@ const initializeAnimation = async () => {
       gsap.set(targets, {
         ...props.to,
         clearProps: 'willChange',
-        immediateRender: true
+        immediateRender: true,
       });
       props.onLetterAnimationComplete?.();
       emit('animation-complete');
-    }
+    },
   });
 
   timelineRef.value = tl;
@@ -145,7 +145,7 @@ const initializeAnimation = async () => {
     duration: props.duration,
     ease: props.ease,
     stagger: props.delay / 1000,
-    force3D: true
+    force3D: true,
   });
 };
 
@@ -174,21 +174,21 @@ onUnmounted(() => {
 });
 
 watch(
-    [
-      () => props.text,
-      () => props.delay,
-      () => props.duration,
-      () => props.ease,
-      () => props.splitType,
-      () => props.from,
-      () => props.to,
-      () => props.threshold,
-      () => props.rootMargin,
-      () => props.onLetterAnimationComplete
-    ],
-    () => {
-      cleanup();
-      initializeAnimation();
-    }
+  [
+    () => props.text,
+    () => props.delay,
+    () => props.duration,
+    () => props.ease,
+    () => props.splitType,
+    () => props.from,
+    () => props.to,
+    () => props.threshold,
+    () => props.rootMargin,
+    () => props.onLetterAnimationComplete,
+  ],
+  () => {
+    cleanup();
+    initializeAnimation();
+  }
 );
 </script>
