@@ -85,12 +85,24 @@ const onLogoHover = () => {
     <nav class="relative z-20 border-t-4 border-blue-500 backdrop-blur-md bg-white/60 dark:bg-gray-900/60">
       <div class="container flex items-center justify-between px-6 py-4 mx-auto">
         <a href="#" class="group" @mouseenter="onLogoHover">
-          <img
-            ref="logoRef"
-            class="w-auto h-12 lg:h-16 transition-transform group-hover:scale-105"
-            src="/logo/logo-hdpi.png"
-            alt="挽星tEam Logo"
-          />
+<!--          <img-->
+<!--            ref="logoRef"-->
+<!--            class="w-auto h-12 lg:h-16 transition-transform group-hover:scale-105"-->
+<!--            src="/logo/logo-hdpi.png"-->
+<!--            alt="挽星tEam Logo"-->
+<!--          />-->
+          <div class="group">
+            <img
+              src="/logo/1.5x/logo-dark-hdpi.png"
+              class="w-auto h-12 lg:h-16 transition-transform group-hover:scale-105 block dark:hidden"
+              alt="Logo Light"
+            />
+            <img
+              src="/logo/1.5x/logo-light-hdpi.png"
+              class="w-auto h-12 lg:h-16 transition-transform group-hover:scale-105 hidden dark:block"
+              alt="Logo Dark"
+            />
+          </div>
         </a>
         <div
           class="hidden md:flex items-center space-x-6 text-[10px] font-black tracking-[0.3em] text-gray-400 uppercase"

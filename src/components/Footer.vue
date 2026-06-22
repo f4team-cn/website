@@ -3,7 +3,10 @@
 <template>
   <footer class="bg-white dark:bg-gray-900">
     <div class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
-      <a href="#"> <img class="w-auto h-10" src="/logo/logo-hdpi.png" alt="" /> </a>
+      <a href="#">
+        <img class="w-auto h-10 block dark:hidden" src="/logo/1.5x/logo-dark-hdpi.png" alt="Logo Light" />
+        <img class="w-auto h-10 hidden dark:block" src="/logo/1.5x/logo-light-hdpi.png" alt="Logo Dark" />
+      </a>
       <p class="text-sm text-gray-600 dark:text-gray-300">
         © Copyright 2022 - {{ new Date().getFullYear() }}. All Rights Reserved.
       </p>
